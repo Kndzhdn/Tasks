@@ -21,7 +21,7 @@ Sample Output:
 3 1 -1 1 -1
 '''
 
-def find_pos(xs, query):
+def binary_search(xs, query):
     left, right = 0, len(xs)-1
     while left <= right:
         middle = (left+right) // 2
@@ -39,4 +39,4 @@ reader = (map(int, line.split()) for line in sys.stdin)
 n, *xs = next(reader)
 k, *queries = next(reader)
 for query in queries:
-    print(find_pos(xs, query), end=" ")
+    print(binary_search(xs, query), end=" ")
